@@ -11,7 +11,7 @@ public class Sword : MonoBehaviour
     public float PushForce;
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.C))
         {
             Animator.SetTrigger("Swing");
         }

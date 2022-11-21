@@ -11871,7 +11871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5462323816078601781, guid: e945299b0fee6fc47af120fd28a5120c, type: 3}
       propertyPath: Msg
-      value: "Dizem que no ba\xFA ao lado existe uma espada que ataca com <color=\"yellow\">ESPA\xC7O</color>."
+      value: "Dizem que no ba\xFA ao lado existe uma espada que ataca com <color=\"yellow\">C</color>."
       objectReference: {fileID: 0}
     - target: {fileID: 5462323816078601781, guid: e945299b0fee6fc47af120fd28a5120c, type: 3}
       propertyPath: msg
