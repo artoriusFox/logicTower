@@ -11063,7 +11063,7 @@ PrefabInstance:
     - target: {fileID: 5462323816078601781, guid: e945299b0fee6fc47af120fd28a5120c, type: 3}
       propertyPath: Msg
       value: "<color=\"yellow\">Se inimigos mortos OU 3 bot\xF5es pressionados</color><br><color=\"red\">A
-        porta se abrira</color>"
+        porta se abrir\xE1</color>"
       objectReference: {fileID: 0}
     - target: {fileID: 5462323816078601781, guid: e945299b0fee6fc47af120fd28a5120c, type: 3}
       propertyPath: msg
