@@ -11,21 +11,33 @@ public class DialogController : MonoBehaviour
     private bool _open = false;
     public Animator Animator;
     public GameObject[] Objects;
+    private bool _collidingWithPlayer = false;
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            _collidingWithPlayer = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (_collidingWithPlayer)
+        {
+            if (Input.GetKey(KeyCode.F))
             {
                 OpenDialog();
             }
         }
+
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
+            _collidingWithPlayer = false;
             CloseDialog();
         }
 
