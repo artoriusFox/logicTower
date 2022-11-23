@@ -29,7 +29,11 @@ public class Player : Fighter
         var x = Input.GetAxis("Horizontal");
         var y = Input.GetAxis("Vertical");
         UpdateMotor(x,y);
-        
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            transform.position = _spawn;
+        }
     }
     
     protected override void StartWalkAnimation()
