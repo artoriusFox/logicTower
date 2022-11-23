@@ -35,10 +35,13 @@ public class ButtonIfTest : Button
    public override void actionOnRemoveItem(Collision2D col)
    {
       if (CanPress.Contains(col.transform.tag))
-      {   
-         base.actionOnRemoveItem(col);
-         _alreadyPress = false;
-         if(!string.IsNullOrEmpty(UnpressCommand)) Target.SendMessage(UnpressCommand);
+      {
+         if (_alreadyPress)
+         {
+            base.actionOnRemoveItem(col);
+            _alreadyPress = false;
+            if(!string.IsNullOrEmpty(UnpressCommand)) Target.SendMessage(UnpressCommand);
+         }
       }
    }
 }

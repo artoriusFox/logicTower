@@ -11,7 +11,7 @@ public class Chest : MonoBehaviour
     private void OnCollisionStay2D(Collision2D col)
     {
         if(col.collider.CompareTag("Player") && !_itemGive ){
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKey(KeyCode.F))
             {
                 if (SwordChest)
                 {
