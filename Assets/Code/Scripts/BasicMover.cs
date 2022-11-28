@@ -17,18 +17,18 @@ namespace Code.Scripts
         {
             if(LockedLayers.Length == 0) return;
             RaycastHit2D hitY, hitX;
-            
+
             hitY = Physics2D.BoxCast(
-                transform.position,
-                Collider2D.size,
+                Collider2D.bounds.center,
+                Collider2D.bounds.size,
                 0,
                 new Vector2(0,MoveDelta.y * Time.fixedDeltaTime),
                 Mathf.Abs(MoveDelta.y * Time.fixedDeltaTime),
                 LayerMask.GetMask(LockedLayers));
             
             hitX = Physics2D.BoxCast(
-                transform.position,
-                Collider2D.size,
+                Collider2D.bounds.center,
+                Collider2D.bounds.size,
                 0,
                 new Vector2(MoveDelta.x * Time.fixedDeltaTime,0),
                 Mathf.Abs(MoveDelta.x * Time.fixedDeltaTime),
