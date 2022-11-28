@@ -56,7 +56,6 @@ namespace Code.Scripts.Code
 
         public void OnCollisionEnter2D(Collision2D col)
         {
-            Debug.Log(col.transform.tag);
             if(col.transform.CompareTag("Player")){
                 CollidingWithPlayer = true;
                 col.transform.SendMessage("ReceiveDamage",new Damage(transform.position,DamagePoint,PushForce));
